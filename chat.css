@@ -1,0 +1,138 @@
+/* Global Styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    transition: width 0.3s ease-in-out;
+}
+
+.sidebar-content {
+    padding: 20px;
+}
+
+.conversation-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.conversation {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.conversation-text {
+    font-weight: bold;
+}
+
+.conversation-content {
+    font-size: 14px;
+    color: #666;
+}
+
+#new-conversation-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#new-conversation-btn:hover {
+    background-color: #3e8e41;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sidebar-toggle:hover {
+    background-color: #444;
+}
+
+/* Chat Container Styles */
+
+.chat-container {
+    margin-left: 250px;
+    padding: 20px;
+    transition: margin 0.3s ease-in-out;
+}
+
+.chat-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-content {
+    padding: 20px;
+}
+
+#chat-box {
+    padding: 10px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    height: 300px;
+}
+
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#send-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+   .sidebar {
+        width: 100px;
+    }
+   .chat-container {
+        margin-left: 100px;
+    }
+}

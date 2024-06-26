@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexGen Community chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <a herf= "index.html" ></a> <img src="logo.png" alt="Logo" class="logo">
+            <h1>NexGen Chat</h1>
+        </div>
+        <div class="sidebar-content">
+            <button id="new-conversation-btn">New Conversation</button>
+            <ul class="conversation-list">
+                <li class="conversation">
+                    <p class="conversation-text">John Doe</p>
+                    <p class="conversation-content">Hello, how are you?</p>
+                </li>
+                <!-- more conversations -->
+            </ul>
+        </div>
+        <button id="sidebar-toggle">Toggle Sidebar</button>
+    </div>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Community Chat</h1>
+
+
+        </div>
+        <div class="chat-content">
+            <div id="chat-box"></div>
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
