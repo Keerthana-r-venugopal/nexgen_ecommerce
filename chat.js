@@ -1,37 +1,36 @@
-// Get elements
-const sidebar = document.querySelector('.sidebar');
-const sidebarToggle = document.querySelector('#sidebar-toggle');
-const chatContainer = document.querySelector('.chat-container');
-const chatBox = document.querySelector('#chat-box');
-const userInput = document.querySelector('#user-input');
-const sendButton = document.querySelector('#send-button');
-const modeToggleCheckbox = document.querySelector('#mode-toggle-checkbox');
-
-// Add event listeners
-sidebarToggle.addEventListener('click', toggleSidebar);
-sendButton.addEventListener('click', sendMessage);
-userInput.addEventListener('keypress', (e) => {
-  if (e.key === 'Enter') {
-    sendMessage();
+document.getElementById('send-button').addEventListener('click', function() {
+  const userInput = document.getElementById('user-input').value;
+  if (userInput.trim()) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', 'user');
+      messageElement.textContent = userInput;
+      document.getElementById('chat-box').appendChild(messageElement);
+      document.getElementById('user-input').value = '';
+      scrollToBottom();
   }
 });
-modeToggleCheckbox.addEventListener('change', toggleDarkMode);
 
-// Functions
-function toggleSidebar() {
-  sidebar.classList.toggle('sidebar-collapsed');
-  chatContainer.classList.toggle('chat-container-expanded');
-}
+document.getElementById('image-upload').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          const imgElement = document.createElement('img');
+          imgElement.src = e.target.result;
+          imgElement.alt = "User uploaded image";
 
-function sendMessage() {
-  const message = userInput.value.trim();
-  if (message !== '') {
-    const messageHTML = `
-      <div class="message">
-        <p class="message-text">${message}</p>
-      </div>
-    `;
-    chatBox.innerHTML += messageHTML;
-    userInput.value = '';
+          const messageElement = document.createElement('div');
+          messageElement.classList.add('message', 'user');
+          messageElement.appendChild(imgElement);
+
+          document.getElementById('chat-box').appendChild(messageElement);
+          scrollToBottom();
+      };
+      reader.readAsDataURL(file);
   }
+});
+
+function scrollToBottom() {
+  const chatBox = document.getElementById('chat-box');
+  chatBox.scrollTop = chatBox.scrollHeight;
 }

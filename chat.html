@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexGen Community chat</title>
+    <title>NexGen Community Chat</title>
     <link rel="stylesheet" href="chat.css">
 </head>
 <body>
     <div class="sidebar">
         <div class="logo-container">
-            <a herf= "index.html" ></a> <img src="logo.png" alt="Logo" class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo" class="logo"></a>
             <h1>NexGen Chat</h1>
         </div>
         <div class="sidebar-content">
@@ -27,16 +27,16 @@
     <div class="chat-container">
         <div class="chat-header">
             <h1>Community Chat</h1>
-
-
         </div>
         <div class="chat-content">
             <div id="chat-box"></div>
-            <input type="text" id="user-input" placeholder="Type a message...">
-            <button id="send-button">Send</button>
+            <div class="input-container">
+                <input type="file" id="image-upload" accept="image/*">
+                <input type="text" id="user-input" placeholder="Type a message...">
+                <button id="send-button">Send</button>
+            </div>
         </div>
     </div>
-
     <script src="chat.js"></script>
 </body>
 </html>
