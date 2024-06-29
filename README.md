@@ -19,3 +19,6 @@ This project is a cutting-edge e-commerce website designed to revolutionize the 
 • Browse Products: Navigate through different product categories.<br>
 • Virtual Try-On: Click on the AR try-on button to visualize the product using your device's camera.<br>
 • Add to Cart: Add desired items to the cart and proceed to checkout.<br>
+
+# Contributing
+Feel free to contribute to this project by creating pull requests, reporting issues, or suggesting new features.
